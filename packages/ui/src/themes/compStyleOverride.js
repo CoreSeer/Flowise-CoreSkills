@@ -6,30 +6,30 @@ export default function componentStyleOverrides(theme) {
                 body: {
                     scrollbarWidth: 'thin',
                     scrollbarColor: theme?.customization?.isDarkMode
-                        ? `${theme.colors?.grey500} ${theme.colors?.darkPrimaryMain}`
+                        ? `${theme.colors?.grey500} ${theme.colors?.darkPrimaryDark}`
                         : `${theme.colors?.grey300} ${theme.paper}`,
                     '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
                         width: 12,
                         height: 12,
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper
+                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryDark : theme.paper
                     },
                     '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
                         borderRadius: 8,
                         backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.grey500 : theme.colors?.grey300,
                         minHeight: 24,
-                        border: `3px solid ${theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper}`
+                        border: `3px solid ${theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryDark : theme.paper}`
                     },
                     '&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
+                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.grey500
                     },
                     '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
+                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.grey500
                     },
                     '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
+                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.grey500
                     },
                     '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper
+                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryDark : theme.paper
                     }
                 }
             }
@@ -46,7 +46,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     color: theme?.customization?.isDarkMode ? theme.colors?.paper : 'inherit',
-                    background: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryLight : 'inherit'
+                    background: theme?.customization?.isDarkMode ? 'inherit' : 'inherit'
                 }
             }
         },
@@ -222,7 +222,7 @@ export default function componentStyleOverrides(theme) {
         MuiTooltip: {
             styleOverrides: {
                 tooltip: {
-                    color: theme?.customization?.isDarkMode ? theme.colors?.paper : theme.paper,
+                    color: theme.paper,
                     background: theme.colors?.grey700
                 }
             }
@@ -231,7 +231,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 option: {
                     '&:hover': {
-                        background: theme?.customization?.isDarkMode ? '#233345 !important' : ''
+                        background: theme?.customization?.isDarkMode ? `${theme.colors?.darkPrimaryLight} !important` : ''
                     }
                 }
             }
