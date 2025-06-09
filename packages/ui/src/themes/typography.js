@@ -5,7 +5,7 @@
 
 export default function themeTypography(theme) {
     return {
-        fontFamily: theme?.customization?.fontFamily,
+        fontFamily: `'Montserrat', sans-serif`,
         h6: {
             fontWeight: 500,
             color: theme.heading,
@@ -19,22 +19,26 @@ export default function themeTypography(theme) {
         h4: {
             fontSize: '1rem',
             color: theme.heading,
-            fontWeight: 600
+            fontWeight: 600,
+            fontFamily: `'AvantGardEF-Bold', sans-serif`
         },
         h3: {
             fontSize: '1.25rem',
             color: theme.heading,
-            fontWeight: 600
+            fontWeight: 600,
+            fontFamily: `'AvantGardEF-Bold', sans-serif`
         },
         h2: {
             fontSize: '1.5rem',
             color: theme.heading,
-            fontWeight: 700
+            fontWeight: 700,
+            fontFamily: `'AvantGardEF-Bold', sans-serif`
         },
         h1: {
             fontSize: '2.125rem',
             color: theme.heading,
-            fontWeight: 700
+            fontWeight: 700,
+            fontFamily: `'AvantGardEF-Bold', sans-serif`
         },
         subtitle1: {
             fontSize: '0.875rem',
